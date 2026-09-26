@@ -78,7 +78,7 @@ namespace STUDY.MathGame
                         if (_difficulty.HasValue)
                         {
                             diff = _difficulty.Value;
-                            Console.WriteLine($"Set difficulty level from comsole arguments: {diff}");
+                            Console.WriteLine($"Set difficulty level from console arguments: {diff}");
                         }
                         else
                         {

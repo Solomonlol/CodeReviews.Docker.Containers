@@ -11,7 +11,12 @@ for(int i=0;i<args.Length;i++)
         case "-d":
             if (i + 1 < args.Length && Enum.TryParse<Difficulty>(args[i + 1], true, out var diff))
                 difficulty = diff;
-            else Console.WriteLine($"Invalid value for --difficulty: only allowed Easy, Medium and Hard. ");
+            else
+            {
+                Console.WriteLine($"Invalid value for --difficulty: only allowed Easy, Medium and Hard. ");
+                Console.WriteLine("Press any key to continue.");
+                Console.ReadKey();
+            }
             i++;
             break;
     }
